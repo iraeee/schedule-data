@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# 로컬 테스트 시 생성되는 파일 (실제 워크플로는 schedule.db 를 .zst 로 압축 후 commit)
+schedule.db
+schedule.db.tmp
+
+# 백업 폴더 (weekly_maintenance.yml 가 생성)
+monthly_backups/
+backups/
+
+# 로컬 stats 출력
+monthly_stats.csv
