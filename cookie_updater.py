@@ -11,10 +11,10 @@ def update_cookie_in_file():
     """scrape_schedule.py의 쿠키를 환경변수에서 업데이트"""
     
     # 환경변수에서 쿠키 가져오기
-    new_cookie = os.environ.get('LABANGBA_COOKIE')
+    new_cookie = os.environ.get('SOURCE_COOKIE')
     
     if not new_cookie:
-        print("환경변수 LABANGBA_COOKIE가 없습니다. 기존 쿠키 사용.")
+        print("환경변수 SOURCE_COOKIE가 없습니다. 기존 쿠키 사용.")
         return False
     
     try:

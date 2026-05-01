@@ -1,7 +1,6 @@
 """
-라방바 홈쇼핑 스케줄 데이터 수집 스크립트
+홈쇼핑 스케줄 데이터 수집 스크립트
 POST API 방식 지원 버전
-쿠키 업데이트: 2025-01-27
 """
 
 from __future__ import annotations
@@ -552,7 +551,7 @@ def parse_records(data: Any, date_str: str, debug: bool = False) -> List[Dict[st
     return result
 
 def main(argv: List[str] | None = None) -> None:
-    parser = argparse.ArgumentParser(description="라방바 홈쇼핑 스케줄 데이터 수집")
+    parser = argparse.ArgumentParser(description="홈쇼핑 스케줄 데이터 수집")
     parser.add_argument("--db", dest="db_path", metavar="PATH", default="schedule.db")
     parser.add_argument("--date", dest="date", default=None, help="날짜 (YYMMDD 형식, 예: 250820)")
     parser.add_argument("--json-file", dest="json_file", default=None, help="로컬 JSON 파일 경로")
@@ -571,10 +570,9 @@ def main(argv: List[str] | None = None) -> None:
         date_str = _dt.datetime.now().strftime("%y%m%d")
     
     print(f"\n{'='*60}")
-    print(f"라방바 홈쇼핑 데이터 수집")
+    print(f"홈쇼핑 데이터 수집")
     print(f"날짜: {date_str}")
     print(f"API: POST 방식")
-    print(f"쿠키 업데이트: 2025-01-27")
     print(f"디버그 모드: {'ON' if args.debug else 'OFF'}")
     print(f"{'='*60}\n")
 

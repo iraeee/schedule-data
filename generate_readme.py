@@ -152,7 +152,7 @@ else:
         change = f"📉 -{format_money(stats['previous_revenue'] - stats['current_revenue'])}"
 
 # README 생성
-readme = f"""# 📊 Media Commerce Analytics Platform
+readme = f"""# schedule-data
 
 {badge}
 

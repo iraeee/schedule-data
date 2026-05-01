@@ -1,7 +1,6 @@
 """
-라방바 API 상태 체크 모듈
+소스 API 상태 체크 모듈
 API 변경, 쿠키 만료, 데이터 수집 이상 감지
-세션 초기화 추가 - 2025-09-29 수정
 """
 
 import requests
@@ -282,8 +281,7 @@ class HealthChecker:
     def check_all(self):
         """모든 체크 수행"""
         print("="*60)
-        print("🏥 라방바 API 상태 진단 시작")
-        print("📄 쿠키 업데이트: 2025-09-29 (세션 초기화 추가)")
+        print("🏥 소스 API 상태 진단 시작")
         print("⚙️ 매출 0원 임계값: {}%".format(self.ZERO_REVENUE_THRESHOLD))
         print("="*60)
         

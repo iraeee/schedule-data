@@ -86,7 +86,7 @@ jobs:
         fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        LABANGBA_COOKIE: ${{ secrets.LABANGBA_COOKIE }}
+        SOURCE_COOKIE: ${{ secrets.SOURCE_COOKIE }}
     
     - name: Run scraping
       run: |
@@ -144,12 +144,6 @@ jobs:
             os.remove('schedule.db')
             print('Original DB removed')
         "
-        fi
-    
-    - name: Generate README
-      run: |
-        if [ -f "generate_readme.py" ]; then
-          python generate_readme.py || echo "README generation completed"
         fi
     
     - name: Commit and push if changed

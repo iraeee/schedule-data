@@ -1,42 +1,23 @@
-# 📊 Media Commerce Analytics Platform
+# schedule-data
 
-![크롤링](https://img.shields.io/badge/크롤링-정상-green)
+홈쇼핑 편성·매출 스냅샷을 매시간 갱신하는 데이터 저장소.
 
-## ✅ 실시간 현황 (2026-05-01)
+## 데이터
 
-### 📍 최종 업데이트
-- **시간**: 2026-05-01 10:39:35 KST
-- **상태**: 정상
+- **`schedule.db.zst`** — SQLite DB 의 zstandard 압축본 (약 24MB).
+  - GitHub Actions 가 매시간 갱신.
+  - 소비자는 `https://raw.githubusercontent.com/iraeee/schedule-data/main/schedule.db.zst` 로 다운로드.
 
-### 💰 매출 현황
-- **현재 총 매출**: **149.1억원**
-- **이전 총 매출**: 0원
-- **매출 변화**: 📈 +149.1억원
-- **데이터 건수**: 514개
-- **0원 매출**: 279개
+## 워크플로
 
-### 🔍 모니터링 포인트
+| 워크플로 | 일정 |
+|---|---|
+| `daily_scraping.yml` | 매시 + 수동 트리거 (편성·날씨 갱신) |
+| `weekly_maintenance.yml` | 매주 일요일 03:00 KST (VACUUM + 월별 백업) |
 
-✅ **정상 수집 중**
-- 정상 매출: 235개
-- 0원 매출: 279개
+## 시크릿
 
-
-## 📈 실행 기록
-
-| 구분 | 매출 | 데이터수 |
-|------|------|----------|
-| 현재 | 149.1억원 | 514개 |
-| 이전 | 0원 | - |
-| 변화 | 📈 +149.1억원 | - |
-
----
-
-## 🔗 바로가기
-
-- [⚙️ Actions](../../actions)
-- [📝 실행 로그](../../actions/workflows/daily_scraping.yml)
-
----
-
-*자동 업데이트: 매 시간*
+| 이름 | 용도 |
+|---|---|
+| `GITHUB_TOKEN` | repo push (GitHub 자동 제공) |
+| `SOURCE_COOKIE` | 소스 사이트 인증 쿠키 (cookie_updater.py 가 헤더 갱신) |
