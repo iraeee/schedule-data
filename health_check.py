@@ -26,6 +26,7 @@ class HealthChecker:
             "sec-fetch-dest": "empty",
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "same-origin",
+            "priority": "u=1, i",
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
             "Cookie": "_ga=GA1.1.1148900813.1753071738; _gcl_au=1.1.2127562858.1753071789.734155396.1753071810.1753071813; _fwb=8206MdvNQcDXiuEel5llWx.1753071736391; sales2=eyJoaXN0b3J5IjpbNTAwMDAwMDNdLCJsYWJhbmdfb2JqIjp7fSwicGFzdF9rZXl3b3JkMiI6Iu2DgO2IrOq3uOumrOuqqCIsInVzZXIiOnsidXNlcl9pZCI6IjlqOTE3YldXdHktQ29FSU9Qa2wzTiIsIm5pY2tuYW1lIjoiaXJhZSIsInNlc3NfaWQiOiI4MTBTbkFuMXl0SEktLV9pRGEtRDYiLCJ1c2VyX3R5cGUiOjAsInZvdWNoZXIiOjAsInByZWZlciI6MX19; sales2.sig=lz9-0bjYr4MEirSNAA8JCeqAwYo; _ga_VN7F3DELDK=GS2.1.s1759100069$o2$g1$t1759100902$j53$l0$h0; _ga_NLGYGNTN3F=GS2.1.s1759100069$o2$g1$t1759100902$j53$l0$h0"
         }

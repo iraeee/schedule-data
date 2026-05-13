@@ -154,6 +154,7 @@ def fetch_schedule_json(
         'Referer': 'https://live.ecomm-data.com/schedule/hs',
         'Accept-Encoding': 'gzip, deflate, br',
         'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
+        'Priority': 'u=1, i',
         'Cookie': cookie_str
     }
     
