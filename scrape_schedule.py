@@ -614,12 +614,18 @@ def main(argv: List[str] | None = None) -> None:
 
     print(f"[저장] {len(protected_records)}개 방송 데이터를 {db_path}에 저장 완료")
     
-    # 매출 0원 항목 경고
+    # 매출 0원 항목 경고 — main project 2026-05-13 가이드 (sales_amt null 50%+ 감지)
     zero_count = sum(1 for r in records if r['revenue'] == 0)
-    if zero_count > len(records) * 0.5:  # 50% 이상이 0원이면 경고
-        print(f"\n⚠️ 경고: 매출 0원 항목이 {zero_count}개 ({zero_count/len(records)*100:.1f}%)입니다.")
-        print("API 응답 구조가 변경되었을 가능성이 있습니다.")
-        print("--debug 옵션으로 상세 정보를 확인하세요.")
+    zero_pct = zero_count / len(records) * 100 if records else 0
+    if zero_pct >= 50:
+        # GH Actions annotation — workflow run UI 에 warning chip 표시
+        print(f"::warning file=scrape_schedule.py::매출 0원 항목 {zero_count}/{len(records)} ({zero_pct:.1f}%) — 라방바 마스킹 의심 (Priority 헤더 / cookie 만료 / endpoint 이동 점검 필요)")
+        print(f"\n⚠️ 경고: 매출 0원 항목이 {zero_count}개 ({zero_pct:.1f}%)입니다.")
+        print("의심 원인 (hub 의 docs/broadcast-troubleshooting.md §1 참조):")
+        print("  ① sales2 cookie 만료 (7일 주기 자동 로그아웃)")
+        print("  ② Priority 헤더 누락 — 200 OK 받지만 sales_amt null 마스킹")
+        print("  ③ API 응답 구조 변경 (endpoint 이동 등)")
+        print("  --debug 옵션으로 상세 정보를 확인하세요.")
 
 if __name__ == "__main__":
     main()
