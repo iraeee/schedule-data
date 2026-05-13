@@ -116,7 +116,7 @@ def protect_revenue_data(new_records, db_path, date_str, debug=False):
 
 def fetch_schedule_json(
     date_str: str = None,
-    url: str = "https://live.ecomm-data.com/schedule/list_hs",
+    url: str = "https://live.ecomm-data.com/api/schedule/list_hs",
     *,
     json_file: str | None = None,
     debug: bool = False,
@@ -154,6 +154,7 @@ def fetch_schedule_json(
         'Referer': 'https://live.ecomm-data.com/schedule/hs',
         'Accept-Encoding': 'gzip, deflate, br',
         'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
+        'Priority': 'u=1, i',
         'Cookie': cookie_str
     }
     
