@@ -13,7 +13,7 @@ class HealthChecker:
     """API 상태 체크 클래스"""
     
     def __init__(self):
-        self.api_url = "https://live.ecomm-data.com/schedule/list_hs"
+        self.api_url = "https://live.ecomm-data.com/api/schedule/list_hs"
         self.headers = {
             "accept": "*/*",
             "accept-language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
