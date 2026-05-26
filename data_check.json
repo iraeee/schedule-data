@@ -1,12 +1,12 @@
 {
   "date": "2026-05-26",
-  "time": "10:39:16",
+  "time": "14:29:51",
   "total": 470,
-  "zero_count": 114,
-  "zero_ratio": 24.25531914893617,
-  "avg_revenue": 45566230.28510638,
-  "max_revenue": 1046968400,
+  "zero_count": 68,
+  "zero_ratio": 14.468085106382977,
+  "avg_revenue": 67780844.32765958,
+  "max_revenue": 1159471000,
   "status": "OK",
-  "message": "✅ 정상: 470개 레코드, 0원 114개",
+  "message": "✅ 정상: 470개 레코드, 0원 68개",
   "action": "NONE"
 }
