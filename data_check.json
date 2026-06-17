@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-16",
-  "time": "18:40:26",
-  "total": 468,
-  "zero_count": 55,
-  "zero_ratio": 11.752136752136751,
-  "avg_revenue": 79339873.6965812,
-  "max_revenue": 2257589120,
-  "status": "OK",
-  "message": "✅ 정상: 468개 레코드, 0원 55개",
-  "action": "NONE"
+  "date": "2026-06-17",
+  "time": "05:01:37",
+  "total": 431,
+  "zero_count": 431,
+  "zero_ratio": 100.0,
+  "avg_revenue": 0,
+  "max_revenue": 0,
+  "status": "CRITICAL",
+  "message": "🚨 모든 데이터가 0원 (431개) - 쿠키 만료",
+  "action": "UPDATE_COOKIE"
 }
