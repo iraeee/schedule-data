@@ -1,12 +1,12 @@
 {
   "date": "2026-07-04",
-  "time": "03:53:20",
-  "total": 427,
-  "zero_count": 427,
+  "time": "06:08:20",
+  "total": 429,
+  "zero_count": 429,
   "zero_ratio": 100.0,
   "avg_revenue": 0,
   "max_revenue": 0,
   "status": "CRITICAL",
-  "message": "🚨 모든 데이터가 0원 (427개) - 쿠키 만료",
+  "message": "🚨 모든 데이터가 0원 (429개) - 쿠키 만료",
   "action": "UPDATE_COOKIE"
 }
